@@ -9,7 +9,7 @@ export type Props = {
 }
 
 export const Header = ({ id, depth, children }: Props) => {
-  const Component = `h${depth}`
+  const Component = `h${depth}` as keyof JSX.IntrinsicElements
   return (
     <Component id={id} className="group relative -ml-6 pl-6">
       <HeaderAnchorLink

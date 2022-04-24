@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { Fragment, useRef, Dispatch, SetStateAction } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
