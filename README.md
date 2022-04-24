@@ -1,6 +1,6 @@
 # datsukan blog markdown preview
 
-[datsukan blog](https://blog.datsukan.me/)の記事を執筆する際の Markdown のレンダリング結果を確認する Web アプリです。
+[datsukan blog](https://blog.datsukan.me/)の記事を執筆する際の Markdown のレンダリング結果を確認する Web アプリです。  
 It is a web application to check the rendering result of markdown when writing an article of datsukan blog.
 
 ## Syntax \ 記法
