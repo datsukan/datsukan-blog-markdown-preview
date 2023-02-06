@@ -14,8 +14,6 @@ import { TOC } from '@components/Markdown/TOC'
 import { Markdown } from '@components/Markdown'
 import { Footer } from '@components/Footer'
 
-const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false })
-
 const Home: NextPage = () => {
   const [text, setText] = useState('')
 
@@ -24,13 +22,11 @@ const Home: NextPage = () => {
       <Header />
       <MainContainer>
         <ContentContainer>
-          <ChildContainer className="!p-0">
-            <MDEditor
+          <ChildContainer>
+            <textarea
               value={text}
-              onChange={value => setText(value ?? '')}
-              preview="edit"
-              visiableDragbar={false}
-              hideToolbar={true}
+              onChange={e => setText(e.target.value)}
+              className="h-full w-full resize-none align-bottom outline-none"
             />
           </ChildContainer>
           <ChildContainer>
