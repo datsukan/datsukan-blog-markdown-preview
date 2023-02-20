@@ -9,8 +9,8 @@ import { MainContainer } from '@components/MainContainer'
 import { ContentContainer } from '@components/ContentContainer'
 import { ChildContainer } from '@components/ChildContainer'
 import { SideContainer } from '@components/SideContainer'
-import { TOC } from '@components/Markdown/TOC'
-import { ArticleMarkdown } from 'datsukan-blog-markdown/dist/esm/index'
+import { TOC } from '@components/TOC'
+import { ArticleMarkdown } from 'datsukan-blog-markdown'
 import { Footer } from '@components/Footer'
 
 const Home: NextPage = () => {
@@ -25,11 +25,13 @@ const Home: NextPage = () => {
             <textarea
               value={text}
               onChange={e => setText(e.target.value)}
-              className="h-full w-full resize-none align-bottom outline-none"
+              className="h-full w-full resize-none p-10 align-bottom  outline-none"
             />
           </ChildContainer>
           <ChildContainer>
-            <ArticleMarkdown text={text} />
+            <div className="p-10">
+              <ArticleMarkdown text={text} />
+            </div>
           </ChildContainer>
         </ContentContainer>
         <SideContainer>

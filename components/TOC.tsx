@@ -2,7 +2,7 @@ import { renderToString } from 'react-dom/server'
 import Link from 'next/link'
 import * as cheerio from 'cheerio'
 
-import { Markdown } from '@components/Markdown'
+import { ArticleMarkdown } from 'datsukan-blog-markdown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCaretRight,
@@ -52,7 +52,7 @@ export const TOC = ({ className = '', markdown }: Props) => {
   let toc: TOC = []
 
   if (markdown) {
-    const $ = cheerio.load(renderToString(<Markdown text={markdown} />))
+    const $ = cheerio.load(renderToString(<ArticleMarkdown text={markdown} />))
     const headings = $('h2, h3, h4').toArray()
     toc = headings.map(data => ({
       text: $(data).contents().text(),

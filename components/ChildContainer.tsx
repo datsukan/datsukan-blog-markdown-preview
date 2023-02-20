@@ -7,9 +7,7 @@ export type Props = {
 
 export const ChildContainer = ({ className = '', children }: Props) => {
   return (
-    <div
-      className={`overflow-auto rounded-lg bg-white p-10 shadow-md ${className}`}
-    >
+    <div className={`overflow-auto rounded-lg bg-white shadow-md ${className}`}>
       {children}
     </div>
   )

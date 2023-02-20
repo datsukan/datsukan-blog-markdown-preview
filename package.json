@@ -22,7 +22,7 @@
     "@types/marked": "^4.0.3",
     "@uiw/react-md-editor": "3.6.0",
     "cheerio": "^1.0.0-rc.10",
-    "datsukan-blog-markdown": "^0.1.9",
+    "datsukan-blog-markdown": "^0.4.7",
     "dotenv": "^16.0.0",
     "hastscript": "^7.0.2",
     "highlight.js": "^11.5.1",
