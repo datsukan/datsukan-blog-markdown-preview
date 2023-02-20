@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 
 import '@uiw/react-md-editor/markdown-editor.css'
 import '@uiw/react-markdown-preview/markdown.css'
-import dynamic from 'next/dynamic'
 
 import { Header } from '@components/Header'
 import { MainContainer } from '@components/MainContainer'
@@ -11,7 +10,7 @@ import { ContentContainer } from '@components/ContentContainer'
 import { ChildContainer } from '@components/ChildContainer'
 import { SideContainer } from '@components/SideContainer'
 import { TOC } from '@components/Markdown/TOC'
-import { Markdown } from '@components/Markdown'
+import { ArticleMarkdown } from 'datsukan-blog-markdown/dist/esm/index'
 import { Footer } from '@components/Footer'
 
 const Home: NextPage = () => {
@@ -30,7 +29,7 @@ const Home: NextPage = () => {
             />
           </ChildContainer>
           <ChildContainer>
-            <Markdown text={text} />
+            <ArticleMarkdown text={text} />
           </ChildContainer>
         </ContentContainer>
         <SideContainer>
